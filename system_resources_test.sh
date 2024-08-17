@@ -12,7 +12,7 @@
 # Function to check for cpu usage
 check_cpu() {
     cpu_usage=$(top -bn1 | grep "Cpu(s)" | awk '{print $2 + $4}')
-    cpu_threshold=65
+    cpu_threshold=70
 
     if (( $(echo "$cpu_usage > $cpu_threshold" | bc -l) )); then
         echo "CPU usage is high: $cpu_usage%"
@@ -26,7 +26,7 @@ check_cpu() {
 # Function to check memory usage
 check_memory() {
     memory_usage=$(free | grep Mem | awk '{print $3/$2 * 100.0}')
-    memory_threshold=65
+    memory_threshold=81
 
     if (( $(echo "$memory_usage > $memory_threshold" | bc -l) )); then
         echo "Memory usage is high: $memory_usage%"
@@ -40,7 +40,7 @@ check_memory() {
 # Function to check disk usage
 check_disk() {
     disk_usage=$(df -h / | awk 'NR==2 {print $5}' | sed 's/%//')
-    disk_threshold=65
+    disk_threshold=80
 
     if (( disk_usage > disk_threshold )); then
         echo "Disk usage is high: $disk_usage%"
