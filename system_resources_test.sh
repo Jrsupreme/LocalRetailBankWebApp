@@ -26,7 +26,7 @@ check_cpu() {
 # Function to check memory usage
 check_memory() {
     memory_usage=$(free | grep Mem | awk '{print $3/$2 * 100.0}')
-    memory_threshold=81
+    memory_threshold=90
 
     if (( $(echo "$memory_usage > $memory_threshold" | bc -l) )); then
         echo "Memory usage is high: $memory_usage%"
