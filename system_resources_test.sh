@@ -40,7 +40,7 @@ check_memory() {
 # Function to check disk usage
 check_disk() {
     disk_usage=$(df -h / | awk 'NR==2 {print $5}' | sed 's/%//')  #Retrieves the disk usage percentage of the root ("/"), removes the "%" sign, and stores the value in the variable 'disk_usage'.
-    disk_threshold=70
+    disk_threshold=75
 
     if (( disk_usage > disk_threshold )); then #compares disk usage to theshold.
         echo "Disk usage is high: $disk_usage%"
