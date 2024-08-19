@@ -4,7 +4,7 @@
 
 ## Purpose
 
-The purpose of this workload is to automate the CI/CD pipeline further by integrating AWS CLI and Elastic Beanstalk CLI (EB CLI) into the deployment process. This approach eliminates the need for manual uploads of source code, enhancing the efficiency and reliability of deployments.
+The purpose of this deployment is to automate the CI/CD pipeline further by integrating AWS CLI and Elastic Beanstalk CLI (EB CLI) into the deployment process. This approach eliminates the need for manual uploads of source code, enhancing the efficiency and reliability of deployments.
 
 ## Steps Taken
 
