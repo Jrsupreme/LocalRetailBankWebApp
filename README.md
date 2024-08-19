@@ -75,10 +75,10 @@ check_cpu() {
 
 # Function to check memory usage
 check_memory() {
-    memory_usage=$(free | grep Mem | awk '{print $3/$2 * 100.0}') #Looks at the memory usage numbers and calculates the usage dividing used memory by total memory and stores the result in the variable 'memory_usage.
+    memory_usage=$(free | grep Mem | awk '{print $3/$2 * 100.0}') #Looks at the memory usage numbers and calculates the usage dividing used memory by total memory and stores the result in the variable 'memory_usage'.
     memory_threshold=90 
 
-    if (( $(echo "$memory_usage > $memory_threshold" | bc -l) )); then #Comparing the memory usage numbers to the threshold.
+    if (( $(echo "$memory_usage > $memory_threshold" | bc -l) )); then #Compares memory usage numbers to the threshold.
         echo "Memory usage is high: $memory_usage%"
         return 1  #If mem usage exceeds threshold exit function with error code.
     else
@@ -89,10 +89,10 @@ check_memory() {
 
 # Function to check disk usage
 check_disk() {
-    disk_usage=$(df -h / | awk 'NR==2 {print $5}' | sed 's/%//')  #Retrieves the disk usage percentage of the root ("/"), removes the "%" sign, and stores the value in the variable 'disk_usage'.
+    disk_usage=$(df -h / | awk 'NR==2 {print $5}' | sed 's/%//')  #Retrieves the disk usage percentage of the root ("/"), removes the "%" sign, and stores the value in the variable "disk_usage".
     disk_threshold=70
 
-    if (( disk_usage > disk_threshold )); then
+    if (( disk_usage > disk_threshold )); then #compares disk usage to theshold.
         echo "Disk usage is high: $disk_usage%"
         return 1 #If disk usage exceeds threshold exit function with error code.
     else
