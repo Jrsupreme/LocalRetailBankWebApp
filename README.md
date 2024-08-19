@@ -122,7 +122,7 @@ else
 fi
 ```
 
-During this workload I decided to challenge my self and learn something new. Since my bash skill could use some improvement. I went ahead and did extensive research on bash functions. I learned how to define and re-call a function, and their various practical applications in scripting
+During this workload I decided to challenge my self and learn something new. Since my bash skill could use some improvement. I went ahead and did extensive research on bash functions. I learned how to define and re-call a function, and their various practical applications in scripting.
 
 ### 5. Create a Multi-Branch Pipeline
 
