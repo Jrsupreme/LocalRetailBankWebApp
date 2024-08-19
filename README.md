@@ -266,7 +266,7 @@ stage ('Deploy') {
 
 With this, the pipeline will automatically deploy the application to Elastic Beanstalk when the deploy stage runs.
 
-Issues and trouble shooting
+# Issues and trouble shooting
 
 ### **Issue: High Memory Usage During Jenkins Build**
 
